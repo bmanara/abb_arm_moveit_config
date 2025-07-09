@@ -139,8 +139,8 @@ def generate_launch_description():
     )
 
     rviz_config = PathJoinSubstitution([
-        FindPackageShare("abb_arm_moveit_config"),
-        "config",
+        FindPackageShare("abb_arm_description"),
+        "rviz",
         "moveit.rviz"
     ])
 
