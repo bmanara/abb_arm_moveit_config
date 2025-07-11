@@ -51,6 +51,8 @@
         <joint name="joint5" value="0.538"/>
         <joint name="joint6" value="-0.3298"/>
     </group_state>
+    <!-- END EFFECTOR: Purpose: Represent information about an end effector. -->
+    <end_effector name="polisher" parent_link="irb4600_60kg_205_link5_cad_rev04_v1"/>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual" type="fixed" parent_frame="world" child_link="base_link"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
@@ -77,6 +79,8 @@
     <disable_collisions link1="chassis" link2="right_wheel" reason="Adjacent"/>
     <disable_collisions link1="chassis" link2="top_left_caster_wheel" reason="Adjacent"/>
     <disable_collisions link1="chassis" link2="top_right_caster_wheel" reason="Adjacent"/>
+    <disable_collisions link1="chassis" link2="laser_frame" reason="Adjacent"/>
+    <disable_collisions link1="chassis" link2="imu_frame" reason="Adjacent"/>
     <disable_collisions link1="irb4600_60kg_205_base_cad_rev05_v1" link2="irb4600_60kg_205_link1_cad_rev04_v1" reason="Adjacent"/>
     <disable_collisions link1="irb4600_60kg_205_link1_cad_rev04_v1" link2="irb4600_60kg_205_link2_cad_rev04_v1" reason="Adjacent"/>
     <disable_collisions link1="irb4600_60kg_205_link2_cad_rev04_v1" link2="irb4600_60kg_205_link3_cad_rev04_v1" reason="Adjacent"/>
