@@ -44,12 +44,6 @@ def load_yaml(package_name, file_path):
 
 
 def generate_launch_description():
-    launch_arguments = {
-        "robot_ip": "xxx.yyy.zzz.www",
-        "use_fake_hardware": "true",
-        "gripper": "robotiq_2f_85",
-        "dof": "7",
-    }
 
     robot_description_content = Command([
         PathJoinSubstitution([FindExecutable(name="xacro")]),
@@ -169,6 +163,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         rviz_node,
-        static_tf,
+        # static_tf,
         run_move_group_node,
     ])
